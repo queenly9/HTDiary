@@ -10,6 +10,7 @@ import {
 import {useState, useEffect} from 'react';
 import {ProgressView} from '@react-native-community/progress-view';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import HeaderBtn from "./src/component/HeaderBtn";
 
 // @ts-ignore
 function App(): JSX.Element {
@@ -52,15 +53,9 @@ function App(): JSX.Element {
             alignSelf: 'flex-start',
             marginLeft: 15,
           }}>
-          <TouchableOpacity style={styles.btn}>
-            <Text style={styles.btxt}>Work</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.btn}>
-            <Text style={styles.btxt}>Study</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.btn}>
-            <Text style={styles.btxt}>Buy</Text>
-          </TouchableOpacity>
+          <HeaderBtn name="Work" />
+          <HeaderBtn name="Study" />
+          <HeaderBtn name="Buy" />
         </View>
         <View style={styles.box}>
           <ScrollView>
