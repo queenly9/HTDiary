@@ -1,9 +1,9 @@
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 // @ts-ignore
-function HeaderBtn({name}) {
+function HeaderBtn({name, onPressBtn}) {
   return (
-    <TouchableOpacity style={styles.btn}>
+    <TouchableOpacity onPress={onPressBtn} style={styles.btn}>
       <Text style={styles.btxt}>{name}</Text>
     </TouchableOpacity>
   );

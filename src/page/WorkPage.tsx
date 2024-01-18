@@ -7,9 +7,9 @@ function WorkPage() {
     <View style={styles.box}>
       <Status />
       <ScrollView>
-        <Todo text="상주냠" />
-        <Todo text="상주냠" />
-        <Todo text="상주냠" />
+        <Todo text="w" />
+        <Todo text="o" />
+        <Todo text="rk" />
       </ScrollView>
     </View>
   );
