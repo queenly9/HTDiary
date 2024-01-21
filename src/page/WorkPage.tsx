@@ -1,8 +1,10 @@
 import Status from '../component/Status';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import Todo from '../component/Todo';
+import CreateTodoBtn from '../component/CreateTodoBtn';
 
 function WorkPage() {
+  // @ts-ignore
   return (
     <View style={styles.box}>
       <Status />
@@ -10,6 +12,7 @@ function WorkPage() {
         <Todo text="w" />
         <Todo text="o" />
         <Todo text="rk" />
+        <CreateTodoBtn />
       </ScrollView>
     </View>
   );

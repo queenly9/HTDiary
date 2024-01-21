@@ -1,5 +1,5 @@
-import { useRecoilValue } from "recoil";
-import { PageSelectedAtom } from "../recoil/PageSelectedAtom";
+import {useRecoilValue} from 'recoil';
+import {PageSelectedAtom} from '../recoil/PageSelectedAtom';
 import WorkPage from '../page/WorkPage';
 import BuyPage from '../page/BuyPage';
 import StudyPage from '../page/StudyPage';
