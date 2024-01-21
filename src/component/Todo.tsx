@@ -1,12 +1,19 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {useState} from 'react';
 
 // @ts-ignore
 function Todo({text}) {
+  const [isLinked, setIsLinked] = useState<boolean>(false);
+
+  const handelLikePress = () => {
+    setIsLinked(!isLinked);
+  };
+
   return (
     <View style={styles.todoWrapper}>
-      <TouchableOpacity>
-        <Icon name="heart-o" size={25} color="pink" />
+      <TouchableOpacity onPress={handelLikePress}>
+        <Icon name={isLinked ? 'heart' : 'heart-o'} size={25} color="pink" />
       </TouchableOpacity>
       <View style={styles.todo}>
         <Text style={styles.todoText}>{text}</Text>
@@ -29,7 +36,6 @@ const styles = StyleSheet.create({
     width: 270,
     height: 60,
     borderRadius: 20,
-    //alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: 20,
   },
